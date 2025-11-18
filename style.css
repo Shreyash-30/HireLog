@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #FFFFFF;
+body {
+  background-color: #FFFFFF;
+  font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111827;
 }
+
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -45,6 +50,7 @@ body{
 }
 
 .head-section{
+     
     padding:0;
     margin:0;
     display: flex;
@@ -139,7 +145,7 @@ z-index: 100;
     padding:5px;
     width:100%;
     height: 50%;
-  
+    margin: 0;
 
 }
 .intro_text{
@@ -193,3 +199,196 @@ z-index: 100;
     max-width: 100%;
    
 }
+
+
+
+
+/* CONTAINER */
+  .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* INDIVIDUAL STEP */
+  .step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Dimensions */
+    height: 80px;
+    min-width: 220px;
+    padding: 0 20px 0 40px; /* Extra padding left for the notch */
+    margin-right: 15px; /* The gap between steps */
+    
+    /* Visuals */
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* TEXT STYLING */
+  .step-number {
+    font-size: 24px;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .step-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+
+  /* --- THE MAGIC: ARROWS & NOTCHES --- */
+
+  /* 1. The Right Arrow (::after) */
+  .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -28px; /* Adjust based on arrow size */
+    
+    /* Create the triangle shape using a rotated square */
+    width: 56px; /* height * 0.707 */
+    height: 56px;
+    background-color: inherit; /* Matches the step background */
+    
+    /* Borders matching the step */
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    
+    /* Rotate to point right */
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 2; 
+  }
+
+  /* 2. The Left Notch (::before) */
+  /* This creates the "V" cutout on the left side */
+  .step::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    
+    width: 56px;
+    height: 56px;
+    background-color: #fff; /* Must match BODY background to look transparent */
+    
+    /* The border here creates the visual line inside the notch */
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    
+    /* Rotate and position to cut into the box */
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    z-index: 1;
+  }
+
+  /* --- ACTIVE STATE (ORANGE) --- */
+  .step.active {
+    background-color: #fcdbb9;
+    color: #8a420f; /* Brownish text */
+    border-color: #fcdbb9; /* Hide border by making it same as bg */
+    
+    /* Remove left notch for the first item */
+    padding-left: 20px;
+    border-left: 1px solid #fcdbb9; 
+  }
+
+  /* Active Arrow styling */
+  .step.active::after {
+    background-color: #fcdbb9;
+    border-color: #fcdbb9; /* Hide border */
+  }
+
+  /* Hide the notch on the very first item if active */
+  .step.active::before {
+    display: none;
+  }
+
+  /* If you have a non-active first step, use this utility: */
+  .step:first-child {
+    border-left: 1px solid #e0e0e0;
+  }
+
+  section + section{
+    margin-top: 30px;
+  }
+  section{
+    padding: 0 20px;
+  }
+  .form_container{
+    padding:10px;
+    margin:0;
+    display: flex;
+    max-width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    gap:62px;
+    background-color: #FFFFFF;
+  }
+  .job_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+    height: 575px;
+    padding: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    margin:0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #F9F9F9;
+  }
+  .form_header{
+    border-bottom: 2px solid #005149;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .form_heading{
+    font-size: 30px;
+    font-weight: 400;
+    color: #005149;
+   
+  }
+  .application_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin:0;
+    font-size: 20px;
+  }
+
+  .submit_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .submit_button{
+    background-color: #005149;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  label{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    height: 25px;
+  }

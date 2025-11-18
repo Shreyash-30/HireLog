@@ -73,8 +73,9 @@
         </div>
        </div>
     </section>
+
     <section class="dashboard">
-        <div class="list_container">
+        <!-- <div class="list_container">
             <ul class="applications_list">
                 <li class="status_type">
                     <p class="status_text">
@@ -106,14 +107,45 @@
                         </span>
                     </p>
                 </li>
-            </ul>
+            </ul> -->
+            <div class="breadcrumb">
+  
+  <div class="step active">
+    <span class="step-number">3</span>
+    <span class="step-label">Total Applications</span>
+  </div>
+
+  <div class="step">
+    <span class="step-number">--</span>
+    <span class="step-label">Applied:</span>
+  </div>
+ <div class="step">
+    <span class="step-number">--</span>
+    <span class="step-label">Interviews</span>
+  </div>
+   <div class="step">
+    <span class="step-number">--</span>
+    <span class="step-label">Offered</span>
+  </div>
+   <div class="step">
+    <span class="step-number">--</span>
+    <span class="step-label">Rejected</span>
+  </div>
+   
+  <div class="step" style="border-right:none; width: 50px; min-width: 50px; overflow:hidden;">
+  </div>
+
+</div>
         </div>
     </section>
 
     <section class="hero">
         <div class="form_container">
             <div class="job_form">
-                <h2 class="form_heading">Add New Job Application</h2>
+            <div class="form_header">
+ <h2 class="form_heading oswald-font">Add New Job Application</h2>
+            </div>
+               
                 <form action="#" class="application_form">
                     <label for="company_name">Company Name:</label>
                     <input type="text" id="company_name" name="company_name" required>
@@ -133,8 +165,10 @@
                         <option value="offered">Offered</option>
                         <option value="rejected">Rejected</option>
                     </select>
-
-                    <button type="submit" class="submit_button">Add Application</button>
+                    <div class="submit_btn">
+                          <button type="submit" class="submit_button">Add Application</button>
+                    </div>
+                  
                 </form>
             </div>
         </div>
@@ -156,11 +190,22 @@
             <div class="cards">
                 <div class="card_container">
                     <div class="card_content">
-                        <h3 class="card_company">Company Name <span id="company"></span></h3>
-                        <p class="card_position">Position <span id="position"></span></p>
-                        <p class="card_location">Location <span id="location"></span></p>
-                        <p class="card_date">Date Applied: <span id="date"></span> </p>
-                        <p class="card_status">Status: <span id="status"></span></p>
+                       <h3 class="card_company">
+  Company Name <span class="card-company-value"></span>
+</h3>
+<p class="card_position">
+  Position <span class="card-position-value"></span>
+</p>
+<p class="card_location">
+  Location <span class="card-location-value"></span>
+</p>
+<p class="card_date">
+  Date Applied: <span class="card-date-value"></span>
+</p>
+<p class="card_status">
+  Status: <span class="card-status-value"></span>
+</p>
+
                     </div>
                 </div>
             </div>
