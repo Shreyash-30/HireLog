@@ -13,19 +13,55 @@ body{
   font-style: normal;
 }
 
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 .head-section{
     padding:0;
     margin:0;
     display: flex;
-
+    scroll-behavior: smooth;
+    /* position: sticky;
+    top:0;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 2px -2px white; */
+width: 100%;
+z-index: 100;
 }
 .nav-container{
     padding: 0;
     margin :0;
     width: 100%;
     height: 90px;
-    border: 1px solid black;
+  
     display: flex;
     gap: 250px;
     box-shadow: #FFFFFF;
@@ -74,3 +110,86 @@ body{
    color: black;
 }
 
+.banner{
+    margin-top:30px;
+    max-width:100%;
+    min-height: 100vh;
+    padding:0;
+    position: relative;
+}
+.banner_container{
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    gap:5px;
+   
+}
+.intro{
+    margin: 15px 15px 15px 15px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+   
+    width: 50%;
+}
+
+.intro_content{
+    display:flex;
+    flex-direction: column;
+    padding:5px;
+    width:100%;
+    height: 50%;
+  
+
+}
+.intro_text{
+    font-size: 60px;
+    font-weight: 400;
+    color: #333333;
+    font-weight: 400;
+}
+.intro_text_2{
+    font-size: 25px;
+    margin-top: 15px;
+    color:#646464;
+    font-weight: 400;
+}
+.features_container{
+    margin-top: 20px;
+     display:flex;
+    flex-direction: column;
+    padding:5px;
+    width:100%;
+    height: 100%;
+   
+}
+.features_list{
+    list-style: none;
+    display: flex;
+    gap:35px;
+    padding: 10px;
+    flex-direction: column;
+     font-size: 30px;
+     color:rgb(17, 17, 17)
+}
+
+.features_img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-top:4px;
+}
+
+.banner_img{
+    
+    padding:5px;
+    width: 50%;
+    display: flex;;
+    
+    min-height: 100vh;
+    
+}
+.intro_img{
+    max-width: 100%;
+   
+}
