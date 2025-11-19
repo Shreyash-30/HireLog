@@ -422,6 +422,7 @@ z-index: 100;
   }
 
   .cards{
+
     display: flex;
     flex-direction:column;
     gap: 15px;
@@ -432,11 +433,13 @@ z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: #F9F9F9;
+    
   }
   .cards_container{
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
+   
   }
   .card_content{
     display: flex;
